@@ -1,0 +1,24 @@
+package main;
+
+import java.util.Scanner;
+
+public class Main {
+	static int func(int n) {
+		if(n == 0) {
+			return 1;
+		}else {
+			return n * func(n-1);
+		}
+		
+		
+		
+		
+	}
+	public static void main(String[] args) {
+		
+		Scanner scn = new Scanner(System.in);
+		int n = scn.nextInt();
+		System.out.println(func(n));
+        scn.close();
+	}
+}
