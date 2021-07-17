@@ -1,0 +1,30 @@
+import java.io.*;
+import java.util.*;
+import java.util.StringTokenizer;
+public class Main {/*11022*/
+	public static void main(String[] args) throws IOException{
+		Scanner scn = new Scanner(System.in);
+		int n = scn.nextInt();
+		int a, b, temp; 
+		int count=0;
+		
+		a = n/10; //10의자리
+		b = n%10; //1의자리
+		
+		while(true) {
+			count++; //카운트 1증가
+			temp = b; //1의자리 저장
+			b = (a+b)%10; //b에 더한후 값입력
+			a = temp; //임시값 저장
+			
+			if(n == a*10 + b) {
+				break;
+			}
+		}
+		System.out.println(count);
+		
+		 
+		
+		
+	}
+}
