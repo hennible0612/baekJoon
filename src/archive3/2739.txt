@@ -1,0 +1,13 @@
+import java.util.Scanner;
+
+public class Main {
+public static void main(String[] args) {
+
+Scanner scn = new Scanner(System.in);
+	int gugudan =  scn.nextInt();
+		for (int i = 1; i<=9; i++) {
+			int answer = gugudan * i;
+			System.out.println(gugudan + " * " + i + " = " + answer );
+		}
+	}
+}
