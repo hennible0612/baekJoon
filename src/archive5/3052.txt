@@ -1,0 +1,26 @@
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) throws IOException{
+		Scanner scn = new Scanner(System.in);
+		int[] array = new int[10];
+		int[] array2 = new int[42];
+		for(int i=0; i< array.length; i++) {
+			array[i] = scn.nextInt();
+		}
+		int count = 0;
+		
+		
+		
+		for(int i=0; i< array.length; i++) {
+			array2[array[i]%42]++;
+		}
+		for(int i=0; i< array2.length; i++) {
+			if(array2[i] != 0) {
+				count++;
+			}
+		}
+		System.out.println(count);
+	}
+}

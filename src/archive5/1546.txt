@@ -1,0 +1,25 @@
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) throws IOException{
+		Scanner scn = new Scanner(System.in);
+		int test = scn.nextInt();
+		int array[] = new int[test];
+		double sum = 0;
+		double big = 0;
+	
+		
+		for(int i=0; i<test; i++) {
+			array[i] = scn.nextInt();
+			if(big < array[i]) {
+				big = array[i];
+			}
+		}
+		for(int i=0; i<test; i++) {
+			sum += (array[i]/big)*100;
+		}
+		
+		System.out.println(sum/test);
+	}
+}
