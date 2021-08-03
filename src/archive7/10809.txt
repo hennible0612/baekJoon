@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner scn = new Scanner(System.in);
+		int alpha[] = new int [26];//알파벳
+		for(int i=0; i<alpha.length; i++) {//알파벳 -1로 초기화
+			alpha[i] = -1;
+		}
+		String num = scn.nextLine();
+		
+		for(int i=0; i< num.length(); i++) {
+			char ch = num.charAt(i); //한문자식 따오기\
+			if(alpha[ch-'a'] == -1) {
+				alpha[ch-'a'] = i; //a 를 빼는 이유는 아스키코드를 사용해 배열0
+			}
+		}
+		
+		for(int i=0; i<26; i++) {
+			System.out.print(alpha[i] + " ");
+		}
+		
+		
+	}
+
+	
+
+}

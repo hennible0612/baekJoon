@@ -1,0 +1,36 @@
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.util.StringTokenizer;
+
+
+public class Main {
+    public static void main(String[] args) throws IOException{    
+    	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+		int loop = Integer.parseInt(br.readLine());
+        StringTokenizer st;
+        for(int i=0;i<loop; i++) {
+        	st = new StringTokenizer(br.readLine());
+        	int a = Integer.parseInt(st.nextToken());
+        	String b = st.nextToken(); //쪼갤 문자
+        	String strArray[] = b.split(""); //쪼개서 배열에 넣음
+        	
+        	for(int j=0; j<b.length(); j++) {
+        		for(int l=0; l<a; l++) {
+        			bw.write(strArray[j]);
+        		}
+        		
+        	}
+        	bw.write("\n");
+        	
+        	
+        	
+        }
+        bw.flush();
+        
+
+    }
+}
